@@ -30,11 +30,13 @@ namespace WebApplication1.Controllers
             return customers.ToArray();
         }
 
+        //GET: /api/Customer
         public IEnumerable<Customer> GetAllCustomers()
         {
             return Customers;
         }
 
+        //GET: /api/Customer/1
         public IHttpActionResult GetCustomer(int id)
         {
             var product = Customers.FirstOrDefault(p => p.Id == id);
